@@ -90,7 +90,7 @@ public class Application {
         }
      }
 ```
-###Auto Configuration
+### Auto Configuration
 The beans can also be auto configured by spring context thereby eliminating the need to define all the 
 beans in a single configuration class like `ApplicationConfiguration`.
 To enable auto configuration all we need to do is enable autoscanning of beans in the 
