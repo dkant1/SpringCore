@@ -24,11 +24,13 @@ You can create a spring application with only spring core support by adding foll
 ```
 With the above dependency maven will bring the following libraries into the project transitively.
 ```
-org.springframework:spring-context
-    |--org.springframework:spring-aop
-    |--org.springframework:spring-beans
-    |--org.springframework:core
-    |--org.springframework:expression
+    org.springframework:spring-context
+    org.springframework:spring-aop
+    org.springframework:spring-beans
+    org.springframework:spring-core
+    org.springframework:spring-expression
+    org.springframework:spring-jcl
+    
 ```
 The above libraries will provide support Dependency Injection and IoC by wiring or autowiring of beans.
 
