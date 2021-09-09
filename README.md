@@ -15,7 +15,7 @@ Following are the ApplicationContexts available:
 You can create a spring application with only spring core support by adding following dependency in the 
 `pom.xml` file.
 
-```
+```xml
 <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -23,7 +23,7 @@ You can create a spring application with only spring core support by adding foll
  </dependency>
 ```
 With the above dependency maven will bring the following libraries into the project transitively.
-```
+```java
     org.springframework:spring-context
     org.springframework:spring-aop
     org.springframework:spring-beans
@@ -40,7 +40,7 @@ the configuration file which will have all the bean definitions. We will use Jav
 configuration and not xml.
 
 `Application.java`
-```
+```java
 public class Application {
  public static void main(String [] args){
 
@@ -53,7 +53,7 @@ public class Application {
 
 `ApplicationConfiguration.java`
 
-```
+```java
 @Configuration
 public class ApplicationConfiguration {
 
@@ -77,7 +77,7 @@ After all the beans have been defined now it should be possible to get these bea
 spring application context.
 
 `Application.java`
-```
+```java
 public class Application {
  public static void main(String [] args){
 
@@ -98,7 +98,7 @@ beans in a single configuration class like `ApplicationConfiguration`.
 To enable auto configuration all we need to do is enable autoscanning of beans in the 
 `ApplicationConfiguration` class by annotating it with `@ComponentScan` and specifying the root package.
 
-```
+```java
 @Configuration
 @ComponentScan("com.dk")// Needed to enable discovery of other beans in the package hierarchy. Otherwise 
                         //only those beans will be instantiated which are in this class
@@ -112,7 +112,7 @@ public class ApplicationConfiguration {
 And the second step would be to annotate respective classes with spring stereotype annotations like 
 `@Component`, `@Repository`,`@Service` etc.
 
-```
+```java
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
@@ -143,8 +143,7 @@ public class UserServiceImpl implements UserService {
 
 ```
 
-```
-
+```java
 @Repository("userRepository")
 public class UserRepositoryImpl implements com.dk.repository.UserRepository {
 
