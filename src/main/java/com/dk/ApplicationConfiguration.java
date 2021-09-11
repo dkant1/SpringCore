@@ -1,5 +1,10 @@
 package com.dk;
 
+import com.dk.repository.UserRepository;
+import com.dk.repository.UserRepositoryImpl;
+import com.dk.service.UserService;
+import com.dk.service.UserServiceImpl;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
